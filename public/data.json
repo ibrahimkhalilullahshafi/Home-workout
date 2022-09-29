@@ -1,0 +1,38 @@
+[
+  {
+    "id": "6335895537d052fc2981cf8c",
+    "picture": "./exercise/push-up.jpg",
+    "name": "Push Up",
+    "time": 30
+  },
+  {
+    "id": "63358955fe41c6fe2353502a",
+    "picture": "./exercise/plank.jpg",
+    "name": "Plank",
+    "time": 30
+  },
+  {
+    "id": "633589552f5177caf75be985",
+    "picture": "./exercise/side plank.jpg",
+    "name": "Side Plank",
+    "time": 30
+  },
+  {
+    "id": "633589558e80d5ef0c19ced4",
+    "picture": "./exercise/lungs.jpg",
+    "name": "Lungs",
+    "time": 30
+  },
+  {
+    "id": "6335895510dcfc92caa0bc16",
+    "picture": "./exercise/squat.jpg",
+    "name": "squat",
+    "time": 30
+  },
+  {
+    "id": "63358955d1f60e9ed95ab51f",
+    "picture": "./exercise/cross crunches.jpg",
+    "name": "Cross crunches",
+    "time": 30
+  }
+]

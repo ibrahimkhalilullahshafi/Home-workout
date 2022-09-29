@@ -1,0 +1,13 @@
+.header {
+    background-color: rgba(24, 18, 18, 0.89);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.logo {
+    height: 70px;
+    margin-right: 10px;
+}
