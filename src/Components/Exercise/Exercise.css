@@ -10,6 +10,12 @@
     gap: 20px;
 }
 
+/* 
+.calculate {
+    position: sticky;
+    bottom: 0;
+} */
+
 @media screen and (max-width: 768px) {
     .exercise-container {
         grid-template-columns: 3fr 2fr;
