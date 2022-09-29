@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Calculation from '../Calculation/Calculation';
 import Workout from '../Workout/Workout';
 import './Exercise.css';
 
@@ -22,7 +23,7 @@ const Exercise = () => {
                 }
             </div>
             <div className='calculate'>
-                <h1>sakdjhgfekqj</h1>
+                <Calculation></Calculation>
             </div>
         </div>
     );

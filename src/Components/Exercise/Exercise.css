@@ -1,9 +1,31 @@
 .exercise-container {
     display: grid;
     grid-template-columns: 4fr 1fr;
+    margin: 15px;
 }
 
 .exercise {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .exercise-container {
+        grid-template-columns: 3fr 2fr;
+    }
+
+    .exercise {
+        grid-template-columns: repeat(2, 1.5fr);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .exercise-container {
+        grid-template-columns: 2fr 2fr;
+    }
+
+    .exercise {
+        grid-template-columns: repeat(1, 2fr);
+    }
 }

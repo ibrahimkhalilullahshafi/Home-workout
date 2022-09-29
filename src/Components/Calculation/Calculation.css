@@ -1,0 +1,51 @@
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.member {
+    width: 100px;
+    height: 100px;
+}
+
+.break button {
+    border: 1px;
+    border-radius: 50%;
+    margin: 3px;
+    padding: 10px;
+    background-color: rgba(24, 18, 18, 0.89);
+    color: white;
+}
+
+.break button:hover {
+    background-color: steelblue;
+    color: white
+}
+
+.workout-time {
+    background-color: rgb(226, 221, 221);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
+.break-time {
+    background-color: rgb(226, 221, 221);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
+.complete {
+    width: 100%;
+    padding: 5px;
+    font-size: large;
+    font-weight: bold;
+    background-color: rgba(24, 18, 18, 0.89);
+    border-radius: 5px;
+    color: white;
+}

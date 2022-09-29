@@ -5,10 +5,11 @@ const Workout = (props) => {
     const { picture, name, time } = (props.workout);
 
     return (
-        <div>
-            <img src={picture} alt="" />
-            <h5>Name: {name}</h5>
-            <h6>Workout time: {time}</h6>
+        <div className='workout'>
+            <img className='picture' src={picture} alt="" />
+            <h4>Name: {name}</h4>
+            <h5>Workout time: {time}s</h5>
+            <button className='add-list'>Add to list</button>
         </div>
     );
 };
