@@ -16,7 +16,7 @@ const Calculation = (props) => {
     }
 
     useEffect(() => {
-        localStorage.setItem('Break Time', JSON.stringify(state));
+        if (state && state.length > 0) { localStorage.setItem('Break Time', JSON.stringify(state)) }
     }, [state]);
 
     useEffect(() => {
@@ -25,8 +25,6 @@ const Calculation = (props) => {
             setState(JSON.parse(state));
         }
     }, []);
-
-
 
 
     let total = 0;
