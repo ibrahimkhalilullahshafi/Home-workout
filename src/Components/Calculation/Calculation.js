@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Calculation.css';
 import member from './member.png'
 import { ToastContainer, toast } from 'react-toastify';
@@ -14,6 +14,20 @@ const Calculation = (props) => {
         const time = event.target.innerText;
         setState(time)
     }
+
+    useEffect(() => {
+        localStorage.setItem('Break Time', JSON.stringify(state));
+    }, [state]);
+
+    useEffect(() => {
+        const state = localStorage.getItem('Break Time');
+        if (state !== null) {
+            setState(JSON.parse(state));
+        }
+    }, []);
+
+
+
 
     let total = 0;
     for (const workout of activity) {
@@ -48,7 +62,7 @@ const Calculation = (props) => {
                 </div>
                 <div className='break-time'>
                     <div><h4>Break Time</h4></div>
-                    <div><h4><span>{state}</span></h4></div>
+                    <div><h4>{state}</h4></div>
                 </div>
             </div>
             <button onClick={notify} className='complete'>Activity Completed</button>
