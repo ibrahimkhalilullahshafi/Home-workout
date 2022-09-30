@@ -1,8 +1,13 @@
 import React from 'react';
 import './Calculation.css';
 import member from './member.png'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 const Calculation = (props) => {
     const { activity } = props;
+    const notify = () => toast.error("You have today's workout..", { position: "top-center", theme: "light" })
     let total = 0;
     for (const workout of activity) {
         total = total + workout.time
@@ -39,7 +44,8 @@ const Calculation = (props) => {
                     <div><h4><span>30</span>s</h4></div>
                 </div>
             </div>
-            <button className='complete'>Activity Completed</button>
+            <button onClick={notify} className='complete'>Activity Completed</button>
+            <ToastContainer />
 
         </section>
     );
