@@ -1,7 +1,12 @@
 import React from 'react';
 import './Calculation.css';
 import member from './member.png'
-const Calculation = () => {
+const Calculation = (props) => {
+    const { activity } = props;
+    let total = 0;
+    for (const workout of activity) {
+        total = total + workout.time
+    }
     return (
         <section>
             <div className='profile'>
@@ -27,7 +32,7 @@ const Calculation = () => {
                 <h2>Total Workout</h2>
                 <div className='workout-time'>
                     <div><h4>Workout Time</h4></div>
-                    <div><h4><span>300</span>s</h4></div>
+                    <div><h4>{total}s</h4></div>
                 </div>
                 <div className='break-time'>
                     <div><h4>Break Time</h4></div>
