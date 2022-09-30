@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Calculation.css';
 import member from './member.png'
 import { ToastContainer, toast } from 'react-toastify';
@@ -8,6 +8,13 @@ import 'react-toastify/dist/ReactToastify.css';
 const Calculation = (props) => {
     const { activity } = props;
     const notify = () => toast.error("You have today's workout..", { position: "top-center", theme: "light" })
+    const [state, setState] = useState([]);
+
+    const handleBreakTime = (event) => {
+        const time = event.target.innerText;
+        setState(time)
+    }
+
     let total = 0;
     for (const workout of activity) {
         total = total + workout.time
@@ -26,11 +33,11 @@ const Calculation = (props) => {
             <div>
                 <h2>Add break time</h2>
                 <div className='break'>
-                    <button><span>10</span>s</button>
-                    <button><span>20</span>s</button>
-                    <button><span>30</span>s</button>
-                    <button><span>40</span>s</button>
-                    <button><span>50</span>s</button>
+                    <button onClick={(event) => handleBreakTime(event)}>10s</button>
+                    <button onClick={(event) => handleBreakTime(event)}>20s</button>
+                    <button onClick={(event) => handleBreakTime(event)}>30s</button>
+                    <button onClick={(event) => handleBreakTime(event)}>40s</button>
+                    <button onClick={(event) => handleBreakTime(event)}>50s</button>
                 </div>
             </div>
             <div>
@@ -41,7 +48,7 @@ const Calculation = (props) => {
                 </div>
                 <div className='break-time'>
                     <div><h4>Break Time</h4></div>
-                    <div><h4><span>30</span>s</h4></div>
+                    <div><h4><span>{state}</span></h4></div>
                 </div>
             </div>
             <button onClick={notify} className='complete'>Activity Completed</button>
