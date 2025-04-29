@@ -1,3 +1,9 @@
+Prerequisites
+Make sure you have the following installed:
+
+Docker
+
+Docker Compose (optional, if using docker-compose.yml)
 In the project directory, you can run:
 
 ### `npm start`
