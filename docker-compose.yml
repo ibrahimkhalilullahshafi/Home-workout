@@ -11,7 +11,7 @@ services:
 
   nginx:
     image: nginx:latest
-    container_name: nginx
+    container_name: nginx-2
     ports:
       - "8080:80"
     volumes:
